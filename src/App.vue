@@ -1,16 +1,27 @@
 <template>
   <div id="app">
+    <!-- VUEX. A peaufiner
+    <h1 v-for="task in tasksToDo" v-bind:key="task">Todo : {{ task }}</h1>
+    <br>
+    <h1 v-for="task in tasksDone" v-bind:key="task">Done : {{ task }}</h1>
+    <br>
+    <h1 v-for="task in tasksAdd" v-bind:key="task">Add This : {{ task }}</h1>
+    <hr>-->
+    <!-- Mettre Todo et Done dans deux components respectifs, pour ensuite permettre d'utiliser vue router et de naviguer entre done et todo. Une fois chose faite commencer le design. -->
     <h1>App.vue</h1>
+    <h5>{{ this.$store.state.toDoTasks.length }} items left</h5>
     <input type="text" @keydown.enter="add()" v-model="addThis">
+    <!-- TODO -->
     <h3>Todo</h3>
-    <span v-for="task in toDoTasks" v-bind:key="task">
+    <span v-for="task in this.$store.state.toDoTasks" v-bind:key="task">
       <p>
         {{ task }}
         <button @click="done(task)">X</button>
       </p>
     </span>
+    <!-- DONE -->
     <h3>Done</h3>
-    <span v-for="task in doneTasks" v-bind:key="task">
+    <span v-for="task in this.$store.state.doneTasks" v-bind:key="task">
       <p class="done">
         {{ task }}
         <button @click="undone(task)">Undone</button>
@@ -31,26 +42,40 @@ export default {
   },
   methods: {
     add() {
-      if (this.addThis.length > 0) {
-        this.toDoTasks.push(this.addThis);
-        this.addThis = "";
-      } else {
-        console.log("Write someting !");
+      if (this.$store.state.addThis.length > 0) {
+        this.$store.state.toDoTasks.push(this.$store.state.addThis);
+        this.$store.state.addThis = "";
       }
     },
     done(task) {
-      let indexDone = this.toDoTasks.indexOf(task);
-      this.doneTasks.push(this.toDoTasks[indexDone]);
-      this.toDoTasks.splice(indexDone, 1);
+      let indexDone = this.$store.state.toDoTasks.indexOf(task);
+      this.$store.state.doneTasks.push(this.$store.state.toDoTasks[indexDone]);
+      this.$store.state.toDoTasks.splice(indexDone, 1);
     },
     undone(task) {
-      let indexToReAdd = this.doneTasks.indexOf(task);
-      this.toDoTasks.push(this.doneTasks[indexToReAdd]);
-      this.doneTasks.splice(indexToReAdd, 1);
+      let indexToReAdd = this.$store.state.doneTasks.indexOf(task);
+      this.$store.state.toDoTasks.push(
+        this.$store.state.doneTasks[indexToReAdd]
+      );
+      this.$store.state.doneTasks.splice(indexToReAdd, 1);
     },
     remove(task) {
-      let indexToReAdd = this.doneTasks.indexOf(task);
-      this.doneTasks.splice(indexToReAdd, 1);
+      let indexToReAdd = this.$store.state.doneTasks.indexOf(task);
+      this.$store.state.doneTasks.splice(indexToReAdd, 1);
+    },
+    plusTest() {
+      this.$store.state.count++;
+    }
+  },
+  computed: {
+    tasksToDo() {
+      return this.$store.state.toDoTasks;
+    },
+    tasksDone() {
+      return this.$store.state.doneTasks;
+    },
+    tasksAdd() {
+      return this.$store.state.addThis;
     }
   }
 };
