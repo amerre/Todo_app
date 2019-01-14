@@ -1,28 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>App.vue</h1>
+    <input type="text" @keydown.enter="addTask" v-model="addThis">
+    <p v-for="task in tasks" v-bind:key="task">{{ task }}</p>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
-  name: "app",
-  components: {
-    HelloWorld
+  data() {
+    return {
+      tasks: ["do this", "to dhis", "do lol"],
+      addThis: ""
+    };
+  },
+  methods: {
+    addTask() {
+      if (this.addThis.length > 0) {
+        this.tasks.push(this.addThis);
+      }
+      this.addThis = "";
+    }
   }
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
