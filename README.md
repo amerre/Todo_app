@@ -1,4 +1,12 @@
-# todo_app
+# Todo App
+
+This is a little TodoApp that I'm building with VueJs.
+
+## Built With
+
+- [Vue.js](https://vuejs.org/) - The web framework used
+- [Vue CLI 3](https://cli.vuejs.org/) - Standard Tooling for Vue.js Development
+- [Vuex](https://vuex.vuejs.org/) - Vuex is a state management pattern + library for Vue.js applications.
 
 ## Project setup
 ```
@@ -27,3 +35,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
