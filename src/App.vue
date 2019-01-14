@@ -1,15 +1,21 @@
 <template>
   <div id="app">
     <h1>App.vue</h1>
-    <input type="text" @keydown.enter="addTask" v-model="addThis">
-    <span v-for="task in tasks" v-bind:key="task">
+    <input type="text" @keydown.enter="add()" v-model="addThis">
+    <h3>Todo</h3>
+    <span v-for="task in toDoTasks" v-bind:key="task">
       <p>
         {{ task }}
-        <button @click="remThis(task)">X</button>
+        <button @click="done(task)">X</button>
       </p>
     </span>
-    <span v-for="task in done" v-bind:key="task">
-      <p class="done">{{ task }}</p>
+    <h3>Done</h3>
+    <span v-for="task in doneTasks" v-bind:key="task">
+      <p class="done">
+        {{ task }}
+        <button @click="undone(task)">Undone</button>
+        <button @click="remove(task)">Remove</button>
+      </p>
     </span>
   </div>
 </template>
@@ -18,22 +24,33 @@
 export default {
   data() {
     return {
-      tasks: ["First", "Second"],
-      done: ["doneStuff"],
+      toDoTasks: ["First", "Second"],
+      doneTasks: ["doneStuff"],
       addThis: ""
     };
   },
   methods: {
-    addTask() {
+    add() {
       if (this.addThis.length > 0) {
-        this.tasks.push(this.addThis);
+        this.toDoTasks.push(this.addThis);
+        this.addThis = "";
+      } else {
+        console.log("Write someting !");
       }
-      this.addThis = "";
     },
-    remThis(event) {
-      let indexToRemove = this.tasks.indexOf(event);
-      this.done.push(this.tasks[indexToRemove]);
-      this.tasks.splice(indexToRemove, 1);
+    done(task) {
+      let indexDone = this.toDoTasks.indexOf(task);
+      this.doneTasks.push(this.toDoTasks[indexDone]);
+      this.toDoTasks.splice(indexDone, 1);
+    },
+    undone(task) {
+      let indexToReAdd = this.doneTasks.indexOf(task);
+      this.toDoTasks.push(this.doneTasks[indexToReAdd]);
+      this.doneTasks.splice(indexToReAdd, 1);
+    },
+    remove(task) {
+      let indexToReAdd = this.doneTasks.indexOf(task);
+      this.doneTasks.splice(indexToReAdd, 1);
     }
   }
 };
@@ -41,18 +58,19 @@ export default {
 
 <style lang="scss">
 #app {
-  width: 200px;
+  width: 400px;
   input {
     width: 100%;
   }
   p {
-    color: red;
+    border: 0.5px solid black;
+    padding: 10px;
     button {
       float: right;
     }
   }
   .done {
-    color: black;
+    color: rgb(187, 185, 185);
     text-decoration: line-through;
   }
 }
