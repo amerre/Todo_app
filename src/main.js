@@ -8,14 +8,9 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    toDoTasks: ["First", "Second"],
+    toDoTasks: ["Second", "First", "Third"],
     doneTasks: ["doneStuff"],
-    addThis: " "
-  },
-  mutations: {
-    increment(state) {
-      state.count++;
-    }
+    addThis: ""
   }
 });
 
