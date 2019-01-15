@@ -1,0 +1,21 @@
+h1, h3 {
+  font-family: 'Luckiest Guy', cursive;
+}
+h1 {
+  font-size: 70px;
+  color:white;
+  margin-bottom:15px;
+}
+h3 {
+  margin: 15px auto;
+  font-size: 30px;
+}
+.done,
+.todo {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 25px;
+  border: 0.2px solid black;
+  margin: 7px auto;
+  padding: 10px;
+
+}

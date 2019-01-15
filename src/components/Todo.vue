@@ -2,7 +2,7 @@
   <div>
     <h3>Todo - {{ this.$store.state.toDoTasks.length }} items left</h3>
     <span v-for="task in this.$store.state.toDoTasks" v-bind:key="task">
-      <p>
+      <p class="todo">
         {{ task }}
         <button @click="done(task)">X</button>
       </p>

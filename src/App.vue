@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <!-- Programmer vue-router -->
-    <app-add></app-add>
-    <hr>
-    <app-todo></app-todo>
-    <hr>
-    <app-done></app-done>
+    <h1>Todos.</h1>
+    <div id="wrapper">
+      <!-- Programmer vue-router -->
+      <app-add></app-add>
+      <app-todo></app-todo>
+      <app-done></app-done>
+    </div>
   </div>
 </template>
 
@@ -24,27 +25,25 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./assets/reset.css";
+@import "./assets/background.css";
+@import "./assets/texts.css";
+
 #app {
-  width: 400px;
-  border: 2px solid black;
-  padding: 20px;
-  margin: 20px;
-  hr {
-    border: 0.5px solid grey;
-  }
-  input {
-    width: 100%;
-  }
-  p {
-    border: 0.5px solid black;
-    padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
+  display: flex;
+  #wrapper {
+    background-color: white;
+    width: 450px;
+    padding: 20px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     button {
       float: right;
     }
-  }
-  .done {
-    color: rgb(187, 185, 185);
-    text-decoration: line-through;
   }
 }
 </style>
