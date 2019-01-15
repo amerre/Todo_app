@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h3>Done</h3>
+    <h3 v-if="this.$store.state.doneTasks.length > 0">Done</h3>
+    <h3 v-else>You did nothing</h3>
     <span v-for="task in this.$store.state.doneTasks" v-bind:key="task">
       <p class="done">
         {{ task }}

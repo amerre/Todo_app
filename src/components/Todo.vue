@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h3>Todo - {{ this.$store.state.toDoTasks.length }} items left</h3>
+    <h3
+      v-if="this.$store.state.toDoTasks.length > 0"
+    >Todo - {{ this.$store.state.toDoTasks.length }} items left</h3>
+    <h3 v-else>Nothing to do</h3>
     <span v-for="task in this.$store.state.toDoTasks" v-bind:key="task">
       <p class="todo">
         {{ task }}

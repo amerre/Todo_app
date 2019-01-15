@@ -2,10 +2,16 @@
   <div id="app">
     <h1>Todos.</h1>
     <div id="wrapper">
-      <!-- Programmer vue-router -->
+      <!-- Input bar -->
       <app-add></app-add>
-      <app-todo></app-todo>
-      <app-done></app-done>
+      <!-- Nav bar -->
+      <app-nav></app-nav>
+      <!-- Todo items -->
+      <app-todo v-if="$store.state.show"></app-todo>
+      <!-- Done items -->
+      <app-done v-if="$store.state.show"></app-done>
+      <!-- Only Todo or Done items -->
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -14,20 +20,22 @@
 import Todo from "./components/Todo.vue";
 import Done from "./components/Done.vue";
 import Add from "./components/Add.vue";
+import Nav from "./components/Nav.vue";
 
 export default {
   components: {
     appTodo: Todo,
     appDone: Done,
-    appAdd: Add
+    appAdd: Add,
+    appNav: Nav
   }
 };
 </script>
 
 <style lang="scss">
-@import "./assets/reset.css";
-@import "./assets/background.css";
-@import "./assets/texts.css";
+@import "./assets/styles/reset.css";
+@import "./assets/styles/background.css";
+@import "./assets/styles/texts.css";
 
 #app {
   flex-direction: column;

@@ -1,4 +1,4 @@
-h1, h3 {
+h1, h3, .nav {
   font-family: 'Luckiest Guy', cursive;
 }
 h1 {
@@ -10,6 +10,20 @@ h3 {
   margin: 15px auto;
   font-size: 30px;
 }
+input {
+  margin-bottom: 15px;
+}
+.router-link {
+  padding: 10px;
+  color: inherit;
+  text-decoration: inherit;
+}
+.router-link:hover {
+  color: green;
+}
+.router-link-exact-active {
+  color:green;
+}
 .done,
 .todo {
   font-family: 'Gloria Hallelujah', cursive;
@@ -17,5 +31,4 @@ h3 {
   border: 0.2px solid black;
   margin: 7px auto;
   padding: 10px;
-
 }
