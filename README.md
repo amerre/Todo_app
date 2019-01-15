@@ -1,12 +1,13 @@
 # Todo App
 
-This is a little TodoApp that I'm building with VueJs.
+This is a little TodoApp that I'm building with VueJs. I'm trying to build it as legible as possible, with the cleanest code. Through my journey, I will come back to it and apply stuffs that I learned to improve this little app.
 
 ## Built With
 
 - [Vue.js](https://vuejs.org/) - The web framework used
 - [Vue CLI 3](https://cli.vuejs.org/) - Standard Tooling for Vue.js Development
 - [Vuex](https://vuex.vuejs.org/) - Vuex is a state management pattern + library for Vue.js applications.
+- [VueRouter](https://router.vuejs.org/) - Vue Router make building Single Page Applications with Vue.js a breeze.
 
 ## Project setup
 ```
