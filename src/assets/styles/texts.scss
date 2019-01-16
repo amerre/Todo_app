@@ -1,6 +1,12 @@
 h1, h3, .nav {
   font-family: 'Luckiest Guy', cursive;
 }
+.done,
+.todo,
+::placeholder,
+input[type=text] {
+  font-family: 'Gloria Hallelujah', cursive;
+}
 h1 {
   font-size: 70px;
   color:white;
@@ -10,8 +16,13 @@ h3 {
   margin: 15px auto;
   font-size: 30px;
 }
-input {
+input[type=text] {
   margin-bottom: 15px;
+  height:35px;
+  font-size:20px;
+}
+::placeholder {
+  font-size: 20px;
 }
 .router-link {
   padding: 10px;
@@ -26,7 +37,6 @@ input {
 }
 .done,
 .todo {
-  font-family: 'Gloria Hallelujah', cursive;
   font-size: 25px;
   border: 0.2px solid black;
   margin: 7px auto;
@@ -39,10 +49,10 @@ input {
   border: none;
   font-size: 25px;
   padding:10px;
-  margin:-10px 0px;
-  width:60px;
+  margin:-10px -10px -10px 10px;
+  width:50px;
   transition: 0.2s;
-  border:2Px solid red;
+  cursor: pointer;
     &:hover {
       color:green;
     }
