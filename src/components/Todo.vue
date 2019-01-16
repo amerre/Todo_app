@@ -7,7 +7,9 @@
     <span v-for="task in this.$store.state.toDoTasks" v-bind:key="task">
       <p class="todo">
         {{ task }}
-        <button @click="done(task)">X</button>
+        <button @click="done(task)">
+          <i class="fas fa-times close"></i>
+        </button>
       </p>
     </span>
   </div>

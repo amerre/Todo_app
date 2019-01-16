@@ -32,3 +32,12 @@ input {
   margin: 7px auto;
   padding: 10px;
 }
+button {
+  float: right;
+  background: none;
+  border: none;
+  .close {
+    font-size: 40px;
+    margin: -10px;
+  }
+}

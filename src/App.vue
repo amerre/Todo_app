@@ -33,9 +33,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./assets/styles/reset.css";
-@import "./assets/styles/background.css";
-@import "./assets/styles/texts.css";
+@import "./assets/styles/reset.scss";
+@import "./assets/styles/background.scss";
+@import "./assets/styles/texts.scss";
 
 #app {
   flex-direction: column;
@@ -49,9 +49,6 @@ export default {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    button {
-      float: right;
-    }
   }
 }
 </style>
