@@ -31,13 +31,20 @@ input {
   border: 0.2px solid black;
   margin: 7px auto;
   padding: 10px;
-}
-button {
+  display:flex;
+  justify-content: space-between;
+  .btnIcon {
   float: right;
   background: none;
   border: none;
-  .close {
-    font-size: 40px;
-    margin: -10px;
+  font-size: 25px;
+  padding:10px;
+  margin:-10px 0px;
+  width:60px;
+  transition: 0.2s;
+  border:2Px solid red;
+    &:hover {
+      color:green;
+    }
   }
 }

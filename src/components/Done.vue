@@ -5,8 +5,14 @@
     <span v-for="task in this.$store.state.doneTasks" v-bind:key="task">
       <p class="done">
         {{ task }}
-        <button @click="undone(task)">Undone</button>
-        <button @click="remove(task)">Remove</button>
+        <span>
+          <button class="btnIcon" @click="undone(task)">
+            <i class="fas fa-circle"></i>
+          </button>
+          <button class="btnIcon" @click="remove(task)">
+            <i class="fas fa-trash"></i>
+          </button>
+        </span>
       </p>
     </span>
   </div>
