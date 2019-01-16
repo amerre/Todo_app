@@ -17,9 +17,9 @@ input {
   padding: 10px;
   color: inherit;
   text-decoration: inherit;
-}
-.router-link:hover {
-  color: green;
+  &:hover {
+    color: green;
+  }
 }
 .router-link-exact-active {
   color:green;
