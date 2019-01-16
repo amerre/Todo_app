@@ -1,0 +1,36 @@
+.slide-todo-enter-active{
+  transition: all 1s ease;
+}
+.slide-todo-leave-active {
+  transition: all 0.2s ease;
+}
+.slide-todo-enter {
+  opacity: 0;
+  transform: translateY(20px) !important;
+}
+.slide-todo-enter-to {
+  opacity: 1;
+}
+.slide-todo-leave {
+  opacity: 1;
+}
+.slide-todo-leave-to {
+  opacity: 0;
+}
+
+.slide-done-enter-active,
+.slide-done-leave-active {
+  transition: all 0.2s ease;
+}
+.slide-done-enter {
+  opacity: 0;
+}
+.slide-done-enter-to {
+  opacity: 1;
+}
+.slide-done-leave {
+  opacity: 1;
+}
+.slide-done-leave-to {
+  opacity: 0;
+}

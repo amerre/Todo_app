@@ -36,6 +36,7 @@ export default {
 @import "./assets/styles/reset.scss";
 @import "./assets/styles/background.scss";
 @import "./assets/styles/texts.scss";
+@import "./assets/styles/transitions.scss";
 
 #app {
   flex-direction: column;

@@ -2,8 +2,8 @@
   <div>
     <h3 v-if="this.$store.state.doneTasks.length > 0">Done</h3>
     <h3 v-else>You did nothing</h3>
-    <span v-for="task in this.$store.state.doneTasks" v-bind:key="task">
-      <p class="done">
+    <transition-group name="slide-done" tag="div">
+      <span class="done" v-for="task in this.$store.state.doneTasks" v-bind:key="task">
         {{ task }}
         <span>
           <button class="btnIcon" @click="undone(task)">
@@ -13,8 +13,8 @@
             <i class="fas fa-trash"></i>
           </button>
         </span>
-      </p>
-    </span>
+      </span>
+    </transition-group>
   </div>
 </template>
 

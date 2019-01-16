@@ -4,14 +4,14 @@
       v-if="this.$store.state.toDoTasks.length > 0"
     >Todo - {{ this.$store.state.toDoTasks.length }} items left</h3>
     <h3 v-else>Nothing to do</h3>
-    <span v-for="task in this.$store.state.toDoTasks" v-bind:key="task">
-      <p class="todo">
+    <transition-group name="slide-todo" tag="div">
+      <span v-for="task in this.$store.state.toDoTasks" v-bind:key="task" class="todo">
         {{ task }}
         <button class="btnIcon" @click="done(task)">
           <i class="far fa-circle"></i>
         </button>
-      </p>
-    </span>
+      </span>
+    </transition-group>
   </div>
 </template>
 
