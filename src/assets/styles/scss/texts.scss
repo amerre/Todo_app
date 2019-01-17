@@ -1,0 +1,62 @@
+h1,
+h3,
+.nav {
+  font-family: "Luckiest Guy", cursive;
+}
+.done,
+.todo,
+::placeholder,
+input[type="text"] {
+  font-family: "Gloria Hallelujah", cursive;
+}
+h1 {
+  font-size: 70px;
+  color: $white;
+  margin-bottom: 15px;
+}
+h3 {
+  margin: 15px auto;
+  font-size: 30px;
+}
+input[type="text"] {
+  margin-bottom: 15px;
+  height: 35px;
+  font-size: 20px;
+}
+::placeholder {
+  font-size: 20px;
+}
+.router-link {
+  padding: 10px;
+  color: inherit;
+  text-decoration: inherit;
+  &:hover {
+    color: $text-color-2;
+  }
+}
+.router-link-exact-active {
+  color: $text-color-2;
+}
+.done,
+.todo {
+  font-size: 25px;
+  border: 0.2px solid $text-color-1;
+  margin: 7px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  .btnIcon {
+    float: right;
+    background: none;
+    border: none;
+    font-size: 25px;
+    padding: 10px;
+    margin: -10px -10px -10px 10px;
+    width: 50px;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+      color: $text-color-2;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+#app {
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
+  display: flex;
+  #wrapper {
+    background-color: $white;
+    width: 450px;
+    padding: 20px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+}
