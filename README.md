@@ -2,6 +2,11 @@
 
 This is a little TodoApp that I'm building with VueJs. I'm trying to build it as legible as possible, with the cleanest code. Through my journey, I will come back to it and apply stuffs that I learned to improve this little app.
 
+# Ideas
+
+- Keep tasks on localstorage
+- Double click on a task to modify it
+
 ## Built With
 
 - [Vue.js](https://vuejs.org/) - The web framework used
@@ -10,31 +15,37 @@ This is a little TodoApp that I'm building with VueJs. I'm trying to build it as
 - [VueRouter](https://router.vuejs.org/) - Vue Router make building Single Page Applications with Vue.js a breeze.
 
 ## Project setup
+
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
 
 ### Compiles and minifies for production
+
 ```
 npm run build
 ```
 
 ### Run your tests
+
 ```
 npm run test
 ```
 
 ### Lints and fixes files
+
 ```
 npm run lint
 ```
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## License
