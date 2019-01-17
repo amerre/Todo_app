@@ -60,3 +60,12 @@ input[type="text"] {
     }
   }
 }
+#credits {
+  color: $white;
+  text-decoration: inherit;
+  font-size: 30px;
+  margin-top: 15px;
+  &:hover {
+    color: $text-color-2;
+  }
+}
