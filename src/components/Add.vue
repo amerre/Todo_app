@@ -9,6 +9,7 @@
     >
   </div>
 </template>
+
 <script>
 export default {
   methods: {
@@ -33,9 +34,3 @@ export default {
   }
 };
 </script>
-
-<style>
-input {
-  width: 100%;
-}
-</style>

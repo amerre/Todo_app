@@ -60,6 +60,10 @@ input[type="text"] {
     }
   }
 }
+.done {
+  color: $crossed;
+  text-decoration: line-through;
+}
 #credits {
   color: $white;
   text-decoration: inherit;

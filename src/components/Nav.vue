@@ -6,10 +6,6 @@
   </div>
 </template>
 
-<style>
-.nav {
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
-}
-</style>
+<script>
+export default {};
+</script>

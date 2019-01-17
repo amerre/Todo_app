@@ -33,10 +33,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.done {
-  color: rgb(187, 185, 185);
-  text-decoration: line-through;
-}
-</style>
