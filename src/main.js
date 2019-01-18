@@ -1,5 +1,5 @@
 // MODULES
-import Vue from "vue/dist/vue.js";
+import Vue from "vue";
 import App from "@/App.vue";
 import Vuex from "vuex";
 import VueRouter from "vue-router";
@@ -25,8 +25,8 @@ const store = new Vuex.Store({
 
 // ROUTER
 const routes = [
-  { path: "/todo", component: Todo },
-  { path: "/done", component: Done }
+  { path: "/todoapp/todo", component: Todo },
+  { path: "/todoapp/done", component: Done }
 ];
 const router = new VueRouter({
   mode: "history",
@@ -35,6 +35,7 @@ const router = new VueRouter({
 
 // VUE INSTANCE
 new Vue({
+  el: "#app",
   router,
   store,
   render: h => h(App)
