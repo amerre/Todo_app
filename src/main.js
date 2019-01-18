@@ -1,12 +1,12 @@
 // MODULES
-import Vue from "vue";
-import App from "./App.vue";
+import Vue from "vue/dist/vue.js";
+import App from "@/App.vue";
 import Vuex from "vuex";
 import VueRouter from "vue-router";
 
 // Components
-import Todo from "./components/Todo.vue";
-import Done from "./components/Done.vue";
+import Todo from "@/components/Todo.vue";
+import Done from "@/components/Done.vue";
 
 // INIT
 Vue.config.productionTip = false;
