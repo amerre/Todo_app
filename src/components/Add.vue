@@ -6,6 +6,7 @@
       v-model="$store.state.addThis"
       placeholder="Write something..."
       autofocus
+      maxlength="15"
     >
   </div>
 </template>
