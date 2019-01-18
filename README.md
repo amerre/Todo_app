@@ -4,7 +4,6 @@ This is a little TodoApp that I'm building with VueJs. I'm trying to build it as
 
 # Things to do on the app
 
-- Responsive optimizations
 - Keep tasks on localstorage
 - Double click on a task to modify it
 
